@@ -8,19 +8,19 @@ spec:
       image: mcr.microsoft.com/azure-cli:latest
       command: ["az", "login",
               "--service-principal",
-              "--username", "71bc73f7-7bb7-476a-b2e9-533498014506",
-              "--password", "c33e7241-b4e0-44fc-a2d8-4570fbb12451",
-              "--tenant", "57952406-af28-43c8-b4de-a4e06f57476d"
+              "--username", "YOUR_AZURE_APPID",
+              "--password", "YOUR_AZURE_PASSWORD",
+              "--tenant", "YOUR_AZURE_TENANTID"
               ]
     - name: set-subscription
       image: mcr.microsoft.com/azure-cli:latest
-      command: ["az", "account", "set", "--subscription","Visual Studio Enterprise"]
+      command: ["az", "account", "set", "--subscription","YOUR_AZURE_SUBSCRIPTION"]
     - name: create-resource-group
       image: mcr.microsoft.com/azure-cli:latest
       command: ["az", "group","create", "--name", "gitops-aks-rg", "--location","southcentralus"]
     - name: ceate-aks-cluster
       image: mcr.microsoft.com/azure-cli:latest
       command: ["az","aks","create","--name","gitops-aks","--resource-group","gitops-aks-rg","--node-count","1","--generate-ssh-keys",
-                "--service-principal", "71bc73f7-7bb7-476a-b2e9-533498014506",
-                "--client-secret","c33e7241-b4e0-44fc-a2d8-4570fbb12451"
+                "--service-principal", "YOUR_AZURE_APPID",
+                "--client-secret","YOUR_AZURE_PASSWORD"
               ]
