@@ -1,0 +1,7 @@
+apiVersion: tekton.dev/v1alpha1
+kind: TaskRun
+metadata:
+  generateName: create-azk-cluster-taskrun-
+spec:
+  taskRef:
+    name: create-azk-cluster
