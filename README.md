@@ -3,7 +3,7 @@
 This repo contains ssome ample Tekton manifests (a Task and a Taskrun) for provisioning an AKS cluster named as _gitops-aks_ in a Azure resource group called _gitops-ask_rg_. 
 
 **Prerequisites**  
-This repo assumes you have installed Tekton Pipelines and optionally, Tekton Dashboard in a Kubernetes cluster (e.g., Docker-Desktop)
+This repo assumes you have installed [Tekton Pipelines](https://github.com/tektoncd/pipeline) and optionally, [Tekton Dashboard](https://github.com/tektoncd/dashboard) in a Kubernetes cluster (e.g., Docker-Desktop)
 
 To create a AKS cluster, follow the steps below:
 1. Clone [this repo](https://github.com/gitops-architecture/aks).
