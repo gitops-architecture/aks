@@ -1,9 +1,9 @@
 # Create an Azure Kubernetes Service (AKS) Cluster using Tekton
 
-This repo contains ssome ample Tekton manifests (a Task and a Taskrun) for provisioning an AKS cluster named as _gitops-aks_ in a Azure resource group called _gitops-ask_rg_. 
+There are many ways in which you can provision an AKS cluster. For instance, you can use Azure Cli, or use powershell script along with Azure Resource Manager (ARM) Templates, or use a configuration tool such as Terraform, to name a few. In this repo, we will demonstrate how to use Tekton Pipelines object, a Task and a Taskrun to create an AKS cluster named as _gitops-aks_ in a Azure resource group called _gitops-ask_rg_. 
 
 **Prerequisites**  
-This repo assumes you have installed [Tekton Pipelines](https://github.com/tektoncd/pipeline) and optionally, [Tekton Dashboard](https://github.com/tektoncd/dashboard) in a Kubernetes cluster (e.g., Docker-Desktop)
+This repo assumes you have installed [Tekton Pipelines (v0.9.2)](https://github.com/tektoncd/pipeline) and optionally, [Tekton Dashboard (v0.3.0)](https://github.com/tektoncd/dashboard) in an existing Kubernetes cluster, either another AKS cluster or a local k8s cluster such as _Minikube_, _Kind_ or _Docker-Desktop_ with k8s enabled).
 
 To create a AKS cluster, follow the steps below:
 1. Clone [this repo](https://github.com/gitops-architecture/aks).
